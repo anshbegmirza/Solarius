@@ -1,0 +1,22 @@
+{
+  "name": "solarius",
+  "version": "1.0.0",
+  "description": "Practice Dashboard",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anshbegmirza/Solarius.git"
+  },
+  "author": "anshbegmirza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anshbegmirza/Solarius/issues"
+  },
+  "homepage": "https://github.com/anshbegmirza/Solarius#readme",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}

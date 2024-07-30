@@ -1,0 +1,21 @@
+.main-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.routine {
+  // background-color: aquamarine;
+}
+
+.activities {
+  // background-color: brown;
+  padding: 3rem;
+  font-size: 2rem;
+
+  &-month {
+    background-color: azure;
+    display: flex;
+    justify-content: space-between;
+    outline: 1px solid lime;
+  }
+}
