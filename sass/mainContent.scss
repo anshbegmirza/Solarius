@@ -9,15 +9,18 @@
 }
 
 .activities {
-  padding: 3rem 4rem 3rem 4rem;
+  display: flex;
+  flex-direction: column;
 
+  padding: 3rem 4rem 3rem 4rem;
   font-size: 2rem;
+
   &-month {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     margin-bottom: 2rem;
+
     p {
       color: rgba($color-black, 0.95);
       font-weight: 500;
@@ -38,7 +41,8 @@
 
   &-tasks {
     // outline: 1px solid lime;
-    margin-bottom: 5rem;
+    // margin-bottom: 5rem;
+
     &-1 {
       outline: 1px solid rgba($color-grey, 0.3);
       padding: 1.5rem;
@@ -97,6 +101,9 @@
         }
       }
     }
+  }
+  &-learning {
+    margin-top: auto;
   }
 }
 
@@ -171,32 +178,4 @@
       }
     }
   }
-}
-
-//universal classes to use in our project
-
-.h2-second {
-  font-size: 1.8rem;
-  color: rgba($color-black, 0.95);
-  font-weight: 500;
-}
-
-.color-blue {
-  color: #435b84;
-  background-color: #bfdbfc83;
-}
-
-.color-yellow {
-  color: #fdae6c;
-  background-color: #f8e5d7b0;
-}
-
-.color-pink {
-  background-color: #f7ecea;
-  color: #e1a9af;
-}
-
-.color-green {
-  color: #96abb1;
-  background-color: #e9ebea;
 }
