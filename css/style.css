@@ -17,8 +17,7 @@ body {
 .parent-grid {
   display: grid;
   grid-template-columns: 20% 1fr max-content;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px; }
+  grid-column-gap: 0px; }
 
 .nav {
   grid-area: 1 / 1 / -1 / 2; }
@@ -27,8 +26,7 @@ body {
   grid-area: 1 / 2 / -1 / 3; }
 
 .header {
-  grid-area: 1 / 3 / -1 / 4;
-  background-color: lightgreen; }
+  grid-area: 1 / 3 / -1 / 4; }
 
 /*********************************/
 /*********************************/
@@ -145,7 +143,7 @@ body {
     color: rgba(29, 29, 29, 0.95); }
 
 .learning-text {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: rgba(129, 128, 123, 0.95);
   font-weight: 500;
   margin-bottom: 2rem; }
@@ -198,4 +196,81 @@ body {
   background-color: #e9ebea; }
 
 .header {
+  padding: 3rem;
+  border-left: 1px solid rgba(129, 128, 123, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; }
+  .header-dp {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .header-dp-img {
+      width: 4rem;
+      object-fit: cover;
+      height: 4rem;
+      border-radius: 50%;
+      margin-bottom: 1rem; }
+    .header-dp p {
+      font-size: 1.2rem;
+      color: #1d1d1d;
+      margin-bottom: 0.5rem;
+      font-weight: 500; }
+    .header-dp span {
+      font-size: 1rem;
+      color: #81807b;
+      font-weight: 500; }
+  .header-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem; }
+  .header-icons {
+    display: grid;
+    place-items: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 0 2rem rgba(29, 29, 29, 0.3);
+    transition: all 0.2s; }
+    .header-icons ion-icon {
+      font-size: 1.6rem; }
+    .header-icons:hover {
+      background-color: black;
+      color: white; }
+
+#plus {
+  background-color: black;
+  color: white;
+  box-shadow: 0 0 2rem rgba(29, 29, 29, 0.6);
+  font-size: 1.8rem; }
+
+.routine {
   padding: 3rem; }
+  .routine-plan {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .routine-plan-txt p {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      color: #1d1d1d;
+      font-weight: 400; }
+    .routine-plan-txt span {
+      font-size: 1.2rem;
+      color: rgba(129, 128, 123, 0.7);
+      font-weight: 500; }
+  .routine-plus {
+    text-decoration: none;
+    height: 4rem;
+    width: 4rem;
+    font-size: 2rem;
+    display: grid;
+    place-items: center;
+    color: white;
+    background-color: #1d1d1d;
+    border-radius: 50%; }

@@ -1,0 +1,45 @@
+.routine {
+  padding: 3rem;
+
+  &-plan {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-txt {
+      p {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+        color: $color-black;
+        font-weight: 400;
+      }
+      span {
+        font-size: 1.2rem;
+        color: rgba($color-grey, 0.7);
+        font-weight: 500;
+      }
+    }
+  }
+
+  // &-plus:link,
+  // &-plus:visited {
+  //   text-decoration: none;
+  //   height: 5rem;
+  //   width: 5rem;
+
+  //   background-color: black;
+  //   border-radius: 50%;
+  // }
+
+  &-plus {
+    text-decoration: none;
+    height: 4rem;
+    width: 4rem;
+    font-size: 2rem;
+    display: grid;
+    place-items: center;
+    color: white;
+    background-color: $color-black;
+
+    border-radius: 50%;
+  }
+}

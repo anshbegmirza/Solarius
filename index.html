@@ -16,12 +16,42 @@
 </head>
 
 <body class="parent-grid">
+  <!-- Header -->
+  <header class="header">
+    <div class="header-dp">
+      <img class="header-dp-img" src="imgs/rsz_dp-2.jpg" alt="Female scientist smiling">
+      <p>Dr. Riddle</p>
+      <span>Scientist</span>
+    </div>
+
+    <div class="header-options">
+      <div class="header-icons">
+        <ion-icon name="pencil"></ion-icon>
+      </div>
+      <div class="header-icons">
+        <ion-icon name="chatbox-ellipses"></ion-icon>
+      </div>
+      <div class="header-icons" id="plus">+</div>
+    </div>
+  </header>
+  <!-- Sidebar -->
   <nav class="nav">
     Sidebar on left
   </nav>
+  <!-- Main-content -->
   <main class="main-content">
-    <div class="routine">Routine</div>
+    <div class="routine">
+      <div class="routine-plan">
+        <div class="routine-plan-txt">
+          <p>Today's Plan</p>
+          <span>June 14th, 2022 </span>
+        </div>
+        <div href="#" class="routine-plus">+</div>
+      </div>
+    </div>
 
+    <!-- Second part of main -->
+    <!-- Acitivities section -->
     <div class="activities">
 
       <div class="activities-month">
@@ -128,9 +158,7 @@
       </div>
     </div>
   </main>
-  <header class="header">
-    Header on right
-  </header>
+
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
