@@ -1,0 +1,127 @@
+.nav {
+  // outline: 1px solid lime;
+  // background-color: lightblue;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+  /**********************/
+  /* nav logo */
+  /**********************/
+  &-logo {
+    display: grid;
+    place-items: center;
+    margin-bottom: 4rem;
+    ion-icon {
+      font-size: 2rem;
+    }
+    h1 {
+      font-size: 2rem;
+      color: $color-black;
+    }
+  }
+  /**********************/
+  /* ul list styling */
+  /**********************/
+  &-options {
+    list-style: none;
+
+    &-item {
+      margin-bottom: 1rem;
+      // background-color: #eee6e1;
+      padding: 0.6rem 1rem 0.6rem 1.6rem;
+      width: 100%;
+    }
+
+    &-link {
+      text-decoration: none;
+      color: $color-black;
+      font-size: 1.6rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-left: -1rem;
+      font-size: 1.4rem;
+      ion-icon {
+      }
+      span {
+        font-size: 1.2rem;
+        font-weight: 700;
+      }
+    }
+
+    &-resources {
+      list-style: none;
+      color: $color-grey;
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        &:first-child {
+          margin-top: 1rem;
+          &::before {
+            background-color: pink;
+          }
+        }
+        &:nth-child(2)::before {
+          background-color: #fabd91;
+        }
+        &:nth-child(3)::before {
+          background-color: #425a83;
+        }
+        &:not(:last-child) {
+          margin-bottom: 1rem;
+        }
+        &::before {
+          content: "";
+          height: 0.7rem;
+          width: 0.7rem;
+          border-radius: 2px;
+        }
+      }
+    }
+  }
+  &-logout {
+    display: flex;
+    align-items: center;
+    border: none;
+    background: none;
+    gap: 1rem;
+    cursor: pointer;
+    margin-top: auto;
+    transition: all 0.3s;
+
+    div {
+      height: 3rem;
+      width: 3rem;
+      background-color: $color-black;
+      border-radius: 50%;
+      display: grid;
+      place-content: center;
+      color: white;
+      font-size: 1.6rem;
+
+      &:hover {
+        background-color: white;
+        color: black;
+      }
+    }
+    p {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: $color-black;
+    }
+    &:hover {
+      background-color: #eee6e1;
+      border-radius: 3px;
+    }
+  }
+}
+
+.chev-down {
+  margin-left: auto;
+  font-size: 1rem;
+}

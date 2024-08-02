@@ -36,7 +36,43 @@
   </header>
   <!-- Sidebar -->
   <nav class="nav">
-    Sidebar on left
+
+    <div class="nav-logo">
+      <ion-icon name="nuclear"></ion-icon>
+      <h1>Solarius</h1>
+    </div>
+    <ul class="nav-options">
+      <li class="nav-options-item"><a href="#" class="nav-options-link">
+          <ion-icon name="stats-chart"></ion-icon>
+          <span> Dashboard</span>
+        </a></li>
+      <li class="nav-options-item"><a href="#" class="nav-options-link">
+          <ion-icon name="git-merge"></ion-icon>
+          <span> Education</span>
+        </a></li>
+      <li class="nav-options-item"><a href="#" class="nav-options-link">
+          <ion-icon name="book"></ion-icon>
+          <span> Resources</span>
+          <ion-icon name="chevron-down" class="chev-down"></ion-icon>
+        </a>
+
+        <ul class="nav-options-resources">
+          <li>Genetics 101</li>
+          <li>DNA synthesis</li>
+          <li>Events</li>
+
+        </ul>
+      </li>
+      <li class="nav-options-item"><a href="#" class="nav-options-link">
+          <ion-icon name="settings"></ion-icon>
+          <span> Settings</span>
+        </a></li>
+    </ul>
+
+    <button class="nav-logout">
+      <div><ion-icon name="exit-outline"></ion-icon></div>
+      <p>Log out</p>
+    </button>
   </nav>
   <!-- Main-content -->
   <main class="main-content">
@@ -47,6 +83,40 @@
           <span>June 14th, 2022 </span>
         </div>
         <div href="#" class="routine-plus">+</div>
+      </div>
+      <p class="routine-text">Sustainable development goals and health innovation</p>
+      <div class="routine-img-text">
+        <div class="img-box">
+          <img src="imgs/dp.jpg" alt="shot of a man " class="img-box-1">
+          <img src="imgs/dp-2.jpg" alt="shot of a man " class="img-box-1 img-box-2">
+          <img src="imgs/dp-4.jpeg" alt="shot of a man " class="img-box-1 img-box-2">
+          <div class="img-box-addmore img-box-2 img-box-1">&nbsp;</div>
+        </div>
+        <div class="routine-img-text--meeting">
+          <p>Medi Team meeting</p>
+          <span>13:30 - 14:50</span>
+        </div>
+      </div>
+
+      <div class="routine-progress">
+        <!-- Img--1 -->
+        <div class="routine-progress-1">
+          <div class="routine-progres-text">
+            <p>Weekly report</p>
+            <span>Track your performance</span>
+          </div>
+          <button>View Report</button>
+        </div>
+        <!-- Img--2 -->
+        <div class="routine-progress-2 icons-img2">
+          <p>Study 78X</p>
+          <div><ion-icon name="time"></ion-icon><span>In progress</span></div>
+        </div>
+        <!-- Img--3 -->
+        <div class="routine-progress-3 icons-img2">
+          <p>Analyses</p>
+          <div><ion-icon name="checkmark-circle"></ion-icon><span>Completed</span></div>
+        </div>
       </div>
     </div>
 

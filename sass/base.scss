@@ -25,7 +25,7 @@ body {
 .parent-grid {
   display: grid;
   // grid-template-columns: 20% 1fr 8%;
-  grid-template-columns: 20% 1fr max-content;
+  grid-template-columns: minmax(max-content, 16%) 1fr max-content;
 
   // grid-template-rows: repeat(5, 1fr);
   grid-column-gap: 0px;
