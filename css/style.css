@@ -9,15 +9,19 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif; }
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  width: 100%; }
 
 body {
   background-color: #fbf7f3; }
 
 .parent-grid {
   display: grid;
-  grid-template-columns: minmax(max-content, 16%) 1fr max-content;
-  grid-column-gap: 0px; }
+  grid-template-columns: minmax(max-content, 16%) 1fr minmax(max-content, 10%);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  height: 100vh; }
 
 .nav {
   grid-area: 1 / 1 / -1 / 2; }
@@ -106,7 +110,7 @@ body {
   font-size: 1.8rem; }
 
 .nav {
-  padding: 3rem;
+  padding: 3rem 1rem 3rem 3rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -129,9 +133,9 @@ body {
     list-style: none; }
     .nav-options-item {
       margin-bottom: 1rem;
-      padding: 0.6rem 1rem 0.6rem 1.6rem;
       width: 100%; }
-    .nav-options-link {
+    .nav-options-link:link, .nav-options-link:visited {
+      padding: 0.6rem 1rem 0.6rem 1.6rem;
       text-decoration: none;
       color: #1d1d1d;
       font-size: 1.6rem;
@@ -139,17 +143,22 @@ body {
       align-items: center;
       gap: 1rem;
       margin-left: -1rem;
-      font-size: 1.4rem; }
-      .nav-options-link span {
+      font-size: 1.4rem;
+      border-radius: 3px;
+      transition: all 0.3s; }
+      .nav-options-link:link span, .nav-options-link:visited span {
         font-size: 1.2rem;
         font-weight: 700; }
+    .nav-options-link:hover, .nav-options-link:active {
+      background-color: #eee6e1; }
     .nav-options-resources {
       list-style: none;
-      color: #81807b; }
+      color: #81807b;
+      margin-left: 3rem; }
       .nav-options-resources li {
         display: flex;
         align-items: center;
-        gap: 1rem; }
+        gap: 0.8rem; }
         .nav-options-resources li:first-child {
           margin-top: 1rem; }
           .nav-options-resources li:first-child::before {
@@ -159,7 +168,7 @@ body {
         .nav-options-resources li:nth-child(3)::before {
           background-color: #425a83; }
         .nav-options-resources li:not(:last-child) {
-          margin-bottom: 1rem; }
+          margin-bottom: 1.4rem; }
         .nav-options-resources li::before {
           content: "";
           height: 0.7rem;
@@ -173,7 +182,8 @@ body {
     gap: 1rem;
     cursor: pointer;
     margin-top: auto;
-    transition: all 0.3s; }
+    transition: all 0.3s;
+    border-radius: 3px; }
     .nav-logout div {
       height: 3rem;
       width: 3rem;
@@ -191,8 +201,7 @@ body {
       font-weight: 700;
       color: #1d1d1d; }
     .nav-logout:hover {
-      background-color: #eee6e1;
-      border-radius: 3px; }
+      background-color: #eee6e1; }
 
 .chev-down {
   margin-left: auto;
