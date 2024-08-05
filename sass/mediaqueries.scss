@@ -1,0 +1,47 @@
+// This file contains our all media queris on which we are going to add breakpoints.
+
+//Media queries manager
+//Desktop my pc first
+
+/*
+0-600px phone
+600-900px tablet portrait
+900-1200 tablet landscape
+1800 + big desktop
+*/
+
+/*
+-phone
+-tab-port
+-tab-lan
+-big-desktop
+
+1em=16px
+
+therefore 600/16=37.5em;
+          900/16=56.25em
+
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone-biggest {
+    @media (max-width: 54em) {
+      @content;
+      //800px
+    }
+  }
+
+  @if $breakpoint == tab {
+    @media (max-width: 60em) {
+      @content;
+      //960px
+    }
+  }
+
+  @if $breakpoint == tab-small {
+    @media (max-width: 70em) {
+      @content;
+      //1040px
+    }
+  }
+}

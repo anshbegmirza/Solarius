@@ -18,6 +18,11 @@ html {
   font-family: "Roboto", sans-serif;
   height: 100vh;
   width: 100%;
+  // overflow: hidden;
+
+  @include respond(tab-small) {
+    font-size: 50%;
+  }
 }
 
 body {
@@ -27,25 +32,40 @@ body {
 .parent-grid {
   display: grid;
   grid-template-columns: minmax(max-content, 16%) 1fr minmax(max-content, 10%);
-  grid-template-rows: 1fr;
+  grid-template-rows: minmax(max-content, 9%) repeat(8, 1fr);
   grid-column-gap: 0px;
   height: 100vh;
+  overflow-x: hidden;
+  width: 100vw;
 }
 
 .nav {
   grid-area: 1 / 1 / -1 / 2;
-  // background-color: lightblue;
+  // background-color: rgb(196, 235, 248);
 }
 
 .main-content {
   grid-area: 1 / 2 / -1 / 3;
-  // background-color: lightcoral;
+  // opacity: 0;
+  // background-color: rgb(252, 164, 164);
+  @include respond(tab) {
+    grid-area: 2 / 2 / -1 / 4;
+  }
+  @include respond(phone-biggest) {
+    grid-area: 2 / 1 / -1 / 4;
+  }
 }
 
 .header {
   grid-area: 1 / 3 / -1 / 4;
-  // background-color: lightgreen;
-  // padding: ;
+  // background-color: rgb(178, 253, 178);
+  @include respond(tab) {
+    grid-area: 1 / 2 / 1 / 4;
+  }
+
+  @include respond(phone-biggest) {
+    grid-area: 1 / 1 / 1 / 4;
+  }
 }
 
 /*********************************/

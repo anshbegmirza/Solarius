@@ -13,6 +13,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet">
+  <link rel="shortcut icon" href="svg/solarius-logo.svg">
 </head>
 
 <body class="parent-grid">
@@ -35,10 +36,17 @@
     </div>
   </header>
   <!-- Sidebar -->
-  <nav class="nav">
 
+  <div class="navigation">
+    <input type="checkbox" class="nav_checkbox" id="navi-toggle">
+    <label for="navi-toggle" class="nav_button"><span class="nav_icon-menu">&nbsp;</span></label>
+
+    <div class="nav-background">&nbsp;</div>
+  </div>
+
+  <nav class="nav">
     <div class="nav-logo">
-      <ion-icon name="nuclear"></ion-icon>
+      <img src="svg/solarius-logo.svg" alt="Solarius logo" class="nav-logo-svg">
       <h1>Solarius</h1>
     </div>
     <ul class="nav-options">
@@ -47,11 +55,11 @@
           <span> Dashboard</span>
         </a></li>
       <li class="nav-options-item"><a href="#" class="nav-options-link">
-          <ion-icon name="git-merge"></ion-icon>
+          <img src="svg/Education.svg" alt="Education icon" class="nav-options-svg">
           <span> Education</span>
         </a></li>
       <li class="nav-options-item"><a href="#" class="nav-options-link">
-          <ion-icon name="book"></ion-icon>
+          <img src="svg/Resources.svg" class="nav-options-svg" alt="">
           <span> Resources</span>
           <ion-icon name="chevron-down" class="chev-down"></ion-icon>
         </a>
@@ -114,7 +122,7 @@
         </div>
         <!-- Img--3 -->
         <div class="routine-progress-3 icons-img2">
-          <p>Analyses</p>
+          <p>Analysis</p>
           <div><ion-icon name="checkmark-circle"></ion-icon><span>Completed</span></div>
         </div>
       </div>

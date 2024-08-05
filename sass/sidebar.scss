@@ -4,8 +4,96 @@
   padding: 3rem 1rem 3rem 3rem;
   display: flex;
   flex-direction: column;
-
   justify-content: space-between;
+  &-items {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+  }
+
+  // Checkbox css goes here
+
+  &_checkbox {
+    display: none;
+  }
+
+  @include respond(phone-biggest) {
+    z-index: 1500;
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+    width: 0;
+    &_button {
+      background-color: white;
+      height: 5rem;
+      width: 5rem;
+      position: fixed;
+      top: 6rem;
+      left: 2rem;
+      border-radius: 50%;
+      z-index: 2000;
+      box-shadow: 0 1rem 2rem rgba(black, 0.4);
+      text-align: center;
+      cursor: pointer;
+    }
+    &-background {
+      height: 4rem;
+      width: 4rem;
+      border-radius: 50%;
+      position: fixed;
+      top: 6.5rem;
+
+      left: 2.5rem;
+      // background-image: linear-gradient(#fbf7f3, #f8ebdf);
+      z-index: 1000;
+      transition: all 0.3s;
+      // transform: scale(20);
+      background-image: linear-gradient(darkblue, violet);
+    }
+
+    //icon
+    &_icon-menu {
+      position: relative;
+      margin-top: 2.5rem;
+      // left: 2rem;
+      &,
+      &::before,
+      &::after {
+        width: 2.5rem;
+        height: 2px;
+        background-color: grey;
+        display: inline-block;
+      }
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        transition: all 0.2s;
+      }
+
+      &::before {
+        top: -1rem;
+      }
+
+      &::after {
+        top: 1rem;
+      }
+    }
+
+    &_button:hover &_icon-menu::before {
+      top: -1.2rem;
+    }
+    &_button:hover &_icon-menu::after {
+      top: 1.2rem;
+    }
+  }
+
   /**********************/
   /* nav logo */
   /**********************/
@@ -13,8 +101,9 @@
     display: grid;
     place-items: center;
     margin-bottom: 4rem;
-    ion-icon {
-      font-size: 2rem;
+    cursor: pointer;
+    &-svg {
+      height: 2.4rem;
     }
     h1 {
       font-size: 2rem;
@@ -26,7 +115,9 @@
   /**********************/
   &-options {
     list-style: none;
-
+    &-svg {
+      height: 1.8rem;
+    }
     &-item {
       margin-bottom: 1rem;
       // background-color: #eee6e1;
@@ -136,4 +227,17 @@
 .chev-down {
   margin-left: auto;
   font-size: 1rem;
+}
+
+@include respond(phone-biggest) {
+  //functionality
+  .nav_checkbox:checked ~ .nav-background {
+    height: 100vh;
+    width: 75%;
+    border-radius: 0;
+  }
+  .nav_checkbox:checked ~ .nav {
+    opacity: 1;
+    width: 100%;
+  }
 }
