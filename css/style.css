@@ -71,7 +71,11 @@ body {
       object-fit: cover;
       height: 4rem;
       border-radius: 50%;
-      margin-bottom: 1rem; }
+      margin-bottom: 1rem;
+      cursor: pointer; }
+      .header-dp-img::before {
+        content: "";
+        height: 1rem; }
     .header-dp p {
       font-size: 1.2rem;
       color: #1d1d1d;
@@ -158,7 +162,11 @@ body {
       .nav-options-resources li {
         display: flex;
         align-items: center;
-        gap: 0.8rem; }
+        gap: 0.8rem;
+        cursor: pointer;
+        padding: 0.4rem; }
+        .nav-options-resources li:hover {
+          background-color: #eee6e1; }
         .nav-options-resources li:first-child {
           margin-top: 1rem; }
           .nav-options-resources li:first-child::before {
@@ -378,7 +386,13 @@ body {
     place-items: center;
     color: white;
     background-color: #1d1d1d;
-    border-radius: 50%; }
+    border-radius: 50%;
+    border: 1px solid transparent;
+    cursor: pointer; }
+    .routine-plus:hover {
+      background-color: white;
+      border: 1px solid black;
+      color: black; }
   .routine-text {
     font-size: 2.2rem;
     margin-bottom: 2rem; }
@@ -426,7 +440,11 @@ body {
         font-weight: 500;
         font-family: inherit;
         text-transform: uppercase;
-        background-color: transparent; }
+        background-color: transparent;
+        transition: all 0.2s;
+        cursor: pointer; }
+        .routine-progress-1 button:hover {
+          background-color: #fcd9b8; }
     .routine-progress-2 {
       background-image: linear-gradient(to right bottom, rgba(230, 228, 197, 0.4), rgba(234, 230, 207, 0.4)), url("../imgs/flower-4.jpg");
       background-size: cover;
@@ -465,7 +483,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f9d9bb; }
+    background-color: #f9d9bb;
+    cursor: pointer; }
     .img-box-addmore::before {
       content: "+5";
       font-size: 1.1rem; }
+    .img-box-addmore:hover {
+      background-color: #f3c69d; }

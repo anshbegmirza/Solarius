@@ -34,6 +34,13 @@
     color: white;
     background-color: $color-black;
     border-radius: 50%;
+    border: 1px solid transparent;
+    cursor: pointer;
+    &:hover {
+      background-color: white;
+      border: 1px solid black;
+      color: black;
+    }
   }
 
   &-text {
@@ -100,6 +107,11 @@
         font-family: inherit;
         text-transform: uppercase;
         background-color: transparent;
+        transition: all 0.2s;
+        cursor: pointer;
+        &:hover {
+          background-color: #fcd9b8;
+        }
       }
     }
 
@@ -149,6 +161,7 @@
 
 .img-box {
   display: flex;
+
   &-1 {
     width: 3.5rem;
     height: 3.5rem;
@@ -164,9 +177,13 @@
     align-items: center;
     justify-content: center;
     background-color: #f9d9bb;
+    cursor: pointer;
     &::before {
       content: "+5";
       font-size: 1.1rem;
+    }
+    &:hover {
+      background-color: #f3c69d;
     }
   }
 }

@@ -68,7 +68,11 @@
         display: flex;
         align-items: center;
         gap: 0.8rem;
-
+        cursor: pointer;
+        padding: 0.4rem;
+        &:hover {
+          background-color: #eee6e1;
+        }
         &:first-child {
           margin-top: 1rem;
           &::before {
