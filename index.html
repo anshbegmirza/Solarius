@@ -36,52 +36,55 @@
     </div>
   </header>
   <!-- Sidebar -->
-
   <div class="navigation">
     <input type="checkbox" class="nav_checkbox" id="navi-toggle">
-    <label for="navi-toggle" class="nav_button"><span class="nav_icon-menu">&nbsp;</span></label>
+    <label for="navi-toggle" class="nav_button">
+      <span class="nav_icon-menu">&nbsp;</span>
+    </label>
 
     <div class="nav-background">&nbsp;</div>
+
+    <nav class="nav">
+      <div class="nav-logo">
+        <img src="svg/solarius-logo.svg" alt="Solarius logo" class="nav-logo-svg">
+        <h1>Solarius</h1>
+      </div>
+      <ul class="nav-options">
+        <li class="nav-options-item"><a href="#" class="nav-options-link">
+            <ion-icon name="stats-chart"></ion-icon>
+            <span> Dashboard</span>
+          </a></li>
+        <li class="nav-options-item"><a href="#" class="nav-options-link">
+            <img src="svg/Education.svg" alt="Education icon" class="nav-options-svg">
+            <span> Education</span>
+          </a></li>
+
+        <li class="nav-options-item">
+          <a href="#" class="nav-options-link">
+            <img src="svg/Resources.svg" class="nav-options-svg" alt="">
+            <span> Resources</span>
+            <ion-icon name="chevron-down" class="chev-down"></ion-icon>
+          </a>
+
+          <ul class="nav-options-resources">
+            <li>Genetics 101</li>
+            <li>DNA synthesis</li>
+            <li>Events</li>
+          </ul>
+        </li>
+        <li class="nav-options-item"><a href="#" class="nav-options-link">
+            <ion-icon name="settings"></ion-icon>
+            <span> Settings</span>
+          </a></li>
+      </ul>
+
+      <button class="nav-logout">
+        <div><ion-icon name="exit-outline"></ion-icon></div>
+        <p>Log out</p>
+      </button>
+    </nav>
   </div>
 
-  <nav class="nav">
-    <div class="nav-logo">
-      <img src="svg/solarius-logo.svg" alt="Solarius logo" class="nav-logo-svg">
-      <h1>Solarius</h1>
-    </div>
-    <ul class="nav-options">
-      <li class="nav-options-item"><a href="#" class="nav-options-link">
-          <ion-icon name="stats-chart"></ion-icon>
-          <span> Dashboard</span>
-        </a></li>
-      <li class="nav-options-item"><a href="#" class="nav-options-link">
-          <img src="svg/Education.svg" alt="Education icon" class="nav-options-svg">
-          <span> Education</span>
-        </a></li>
-      <li class="nav-options-item"><a href="#" class="nav-options-link">
-          <img src="svg/Resources.svg" class="nav-options-svg" alt="">
-          <span> Resources</span>
-          <ion-icon name="chevron-down" class="chev-down"></ion-icon>
-        </a>
-
-        <ul class="nav-options-resources">
-          <li>Genetics 101</li>
-          <li>DNA synthesis</li>
-          <li>Events</li>
-
-        </ul>
-      </li>
-      <li class="nav-options-item"><a href="#" class="nav-options-link">
-          <ion-icon name="settings"></ion-icon>
-          <span> Settings</span>
-        </a></li>
-    </ul>
-
-    <button class="nav-logout">
-      <div><ion-icon name="exit-outline"></ion-icon></div>
-      <p>Log out</p>
-    </button>
-  </nav>
   <!-- Main-content -->
   <main class="main-content">
     <div class="routine">

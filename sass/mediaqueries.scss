@@ -24,6 +24,27 @@ therefore 600/16=37.5em;
 */
 
 @mixin respond($breakpoint) {
+  @if $breakpoint == mobile-large {
+    @media (max-width: 30em) {
+      @content;
+      //480px
+    }
+  }
+
+  @if $breakpoint == phone {
+    @media (max-width: 40em) {
+      @content;
+      //640px
+    }
+  }
+
+  @if $breakpoint == phone-bigger {
+    @media (min-width: 54em) {
+      @content;
+      //800px
+    }
+  }
+
   @if $breakpoint == phone-biggest {
     @media (max-width: 54em) {
       @content;

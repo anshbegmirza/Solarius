@@ -1,33 +1,48 @@
+.navigation {
+  padding: 3rem 1rem 3rem 3rem;
+}
+
 .nav {
   // outline: 1px solid lime;
   // background-color: lightblue;
-  padding: 3rem 1rem 3rem 3rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  // height: 98vh;
   &-items {
     display: flex;
     flex-direction: column;
-
     justify-content: space-between;
   }
 
   // Checkbox css goes here
-
   &_checkbox {
     display: none;
   }
 
+  // Responsive styles for mobile view
   @include respond(phone-biggest) {
     z-index: 1500;
     height: 100vh;
-
     position: fixed;
     top: 0;
     left: 0;
-
     opacity: 0;
     width: 0;
+    transition: all 0.3s; // Add transition for smooth effect
+
+    &_checkbox:checked ~ .nav-background {
+      height: 100vh;
+      width: 75%;
+      border-radius: 0;
+    }
+
+    &_checkbox:checked ~ .nav {
+      opacity: 1;
+      width: 75%; // Set width to make it visible
+      transition: all 0.3s;
+    }
+
     &_button {
       background-color: white;
       height: 5rem;
@@ -40,57 +55,59 @@
       box-shadow: 0 1rem 2rem rgba(black, 0.4);
       text-align: center;
       cursor: pointer;
+
+      // Icon menu animation
+      .nav_icon-menu {
+        position: relative;
+        margin-top: 2.5rem;
+
+        &,
+        &::before,
+        &::after {
+          width: 2.5rem;
+          height: 2px;
+          background-color: grey;
+          display: inline-block;
+        }
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          transition: all 0.2s;
+        }
+
+        &::before {
+          top: -0.8rem;
+        }
+
+        &::after {
+          top: 0.8rem;
+        }
+      }
+
+      &:hover .nav_icon-menu::before {
+        top: -1rem;
+      }
+
+      &:hover .nav_icon-menu::after {
+        top: 1rem;
+      }
     }
+
     &-background {
       height: 4rem;
       width: 4rem;
       border-radius: 50%;
       position: fixed;
       top: 6.5rem;
-
       left: 2.5rem;
-      // background-image: linear-gradient(#fbf7f3, #f8ebdf);
+      background-image: linear-gradient(#d3c5b7, #fcf0e5);
       z-index: 1000;
       transition: all 0.3s;
       // transform: scale(20);
-      background-image: linear-gradient(darkblue, violet);
-    }
-
-    //icon
-    &_icon-menu {
-      position: relative;
-      margin-top: 2.5rem;
-      // left: 2rem;
-      &,
-      &::before,
-      &::after {
-        width: 2.5rem;
-        height: 2px;
-        background-color: grey;
-        display: inline-block;
-      }
-      &::before,
-      &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        transition: all 0.2s;
-      }
-
-      &::before {
-        top: -1rem;
-      }
-
-      &::after {
-        top: 1rem;
-      }
-    }
-
-    &_button:hover &_icon-menu::before {
-      top: -1.2rem;
-    }
-    &_button:hover &_icon-menu::after {
-      top: 1.2rem;
+      // background-image: linear-gradient(darkblue, violet);
     }
   }
 
@@ -102,26 +119,30 @@
     place-items: center;
     margin-bottom: 4rem;
     cursor: pointer;
+
     &-svg {
       height: 2.4rem;
     }
+
     h1 {
       font-size: 2rem;
       color: $color-black;
     }
   }
+
   /**********************/
   /* ul list styling */
   /**********************/
   &-options {
     list-style: none;
+
     &-svg {
       height: 1.8rem;
     }
+
     &-item {
       margin-bottom: 1rem;
       // background-color: #eee6e1;
-
       width: 100%;
     }
 
@@ -139,6 +160,7 @@
         font-size: 1.4rem;
         border-radius: 3px;
         transition: all 0.3s;
+
         span {
           font-size: 1.2rem;
           font-weight: 700;
@@ -155,30 +177,38 @@
       list-style: none;
       color: $color-grey;
       margin-left: 3rem;
+
       li {
         display: flex;
         align-items: center;
         gap: 0.8rem;
         cursor: pointer;
         padding: 0.4rem;
+
         &:hover {
           background-color: #eee6e1;
         }
+
         &:first-child {
           margin-top: 1rem;
+
           &::before {
             background-color: pink;
           }
         }
+
         &:nth-child(2)::before {
           background-color: #fabd91;
         }
+
         &:nth-child(3)::before {
           background-color: #425a83;
         }
+
         &:not(:last-child) {
           margin-bottom: 1.4rem;
         }
+
         &::before {
           content: "";
           height: 0.7rem;
@@ -188,6 +218,7 @@
       }
     }
   }
+
   &-logout {
     display: flex;
     align-items: center;
@@ -198,6 +229,9 @@
     margin-top: auto;
     transition: all 0.3s;
     border-radius: 3px;
+    @include respond(phone-bigger) {
+      margin-bottom: 2rem;
+    }
     div {
       height: 3rem;
       width: 3rem;
@@ -213,11 +247,13 @@
         color: black;
       }
     }
+
     p {
       font-size: 1.2rem;
       font-weight: 700;
       color: $color-black;
     }
+
     &:hover {
       background-color: #eee6e1;
     }
@@ -229,8 +265,17 @@
   font-size: 1rem;
 }
 
+// Functionality for the checkbox
 @include respond(phone-biggest) {
-  //functionality
+  .nav {
+    margin-top: 10rem;
+    height: 85vh;
+    padding: 3rem 1rem 3rem 3rem;
+    &-logo {
+      display: none;
+    }
+  }
+
   .nav_checkbox:checked ~ .nav-background {
     height: 100vh;
     width: 75%;
@@ -238,6 +283,38 @@
   }
   .nav_checkbox:checked ~ .nav {
     opacity: 1;
-    width: 100%;
+    width: 75%;
+  }
+
+  .nav_checkbox:checked + .nav_button .nav_icon-menu {
+    background-color: transparent;
+  }
+
+  .nav_checkbox:checked + .nav_button .nav_icon-menu::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+  .nav_checkbox:checked + .nav_button .nav_icon-menu::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+}
+
+@include respond(phone-bigger) {
+  .nav {
+    height: 100%;
+  }
+}
+
+@include respond(mobile-large) {
+  .nav_checkbox:checked ~ .nav-background {
+    height: 100vh;
+    width: 89%;
+    border-radius: 0;
+  }
+
+  .nav_checkbox:checked ~ .nav {
+    opacity: 1;
+    width: 89%;
   }
 }
