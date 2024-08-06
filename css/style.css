@@ -39,7 +39,7 @@ body {
 
 .parent-grid {
   display: grid;
-  grid-template-columns: minmax(max-content, 16%) 1fr minmax(max-content, 10%);
+  grid-template-columns: minmax(max-content, 16%) 1fr minmax(max-content, 7%);
   grid-template-rows: minmax(max-content, 9%) repeat(8, 1fr);
   grid-column-gap: 0px;
   height: 100vh;
@@ -386,6 +386,9 @@ body {
     opacity: 1;
     width: 89%; } }
 
+#selected-dashboard {
+  background-color: #eee6e1; }
+
 .main-content {
   display: grid;
   grid-template-columns: repeat(2, 1fr); }
@@ -589,7 +592,7 @@ body {
       border-left: 1px solid rgba(129, 128, 123, 0.4);
       padding-left: 2rem; }
       .routine-img-text--meeting p {
-        color: #1d1d1d;
+        color: rgba(29, 29, 29, 0.9);
         margin-bottom: 0.5rem; }
       .routine-img-text--meeting span {
         color: #81807b; }
