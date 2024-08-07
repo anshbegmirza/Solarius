@@ -121,14 +121,16 @@ body {
       border-radius: 50%;
       position: absolute;
       top: -0.1rem;
-      left: 3.2rem; }
+      left: 3.2rem;
+      z-index: 2; }
     .header-dp-img {
       width: 4rem;
       object-fit: cover;
       height: 4rem;
       border-radius: 50%;
       margin-bottom: 1.8rem;
-      cursor: pointer; }
+      cursor: pointer;
+      filter: grayscale(1); }
       @media (max-width: 60em) {
         .header-dp-img {
           margin: 0; } }
@@ -220,8 +222,8 @@ body {
         height: 4rem;
         width: 4rem;
         position: fixed;
-        top: 6rem;
-        left: 3rem;
+        top: 6.5rem;
+        left: 1rem;
         border-radius: 50%;
         z-index: 2000;
         box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.27);
@@ -253,8 +255,8 @@ body {
         width: 3.5rem;
         border-radius: 50%;
         position: fixed;
-        top: 6.5rem;
-        left: 3rem;
+        top: 7rem;
+        left: 1rem;
         background-image: linear-gradient(#d3c5b7, #fcf0e5);
         z-index: 1000;
         transition: all 0.2s; } }
@@ -470,7 +472,7 @@ body {
         place-items: center;
         height: 1.4rem;
         width: 1.4rem;
-        border-radius: 40%;
+        border-radius: 100%;
         color: #1d1d1d;
         margin-right: 2px;
         font-size: 0.9rem; }
