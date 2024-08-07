@@ -222,7 +222,7 @@ body {
         height: 4rem;
         width: 4rem;
         position: fixed;
-        top: 6.5rem;
+        top: 8rem;
         left: 1rem;
         border-radius: 50%;
         z-index: 2000;
@@ -255,7 +255,7 @@ body {
         width: 3.5rem;
         border-radius: 50%;
         position: fixed;
-        top: 7rem;
+        top: 8.5rem;
         left: 1rem;
         background-image: linear-gradient(#d3c5b7, #fcf0e5);
         z-index: 1000;
@@ -369,7 +369,8 @@ body {
     padding: 3rem 1rem 3rem 3rem; }
     .nav-logo {
       margin-bottom: 2rem;
-      margin-left: 4rem; }
+      margin-left: auto;
+      margin-right: auto; }
       .nav-logo img {
         display: inline-block;
         margin-bottom: 0.3rem; }
@@ -411,10 +412,11 @@ body {
 .main-content {
   display: grid;
   grid-template-columns: repeat(2, 1fr); }
-  @media (max-width: 40em) {
+  @media (max-width: 54em) {
     .main-content {
       grid-template-rows: repeat(4, 1fr);
-      grid-template-columns: repeat(1, 1fr); }
+      grid-template-columns: repeat(1, 1fr);
+      grid-row-gap: 2rem; }
       .main-content .activities {
         height: 100%; }
       .main-content .routine {
@@ -482,6 +484,9 @@ body {
         font-size: 1.2rem;
         color: rgba(29, 29, 29, 0.8);
         font-weight: 500; }
+  @media (max-width: 54em) {
+    .activities-tasks {
+      margin-bottom: 5rem; } }
   .activities-learning {
     margin-top: auto; }
 
@@ -620,6 +625,15 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 3fr 4fr;
     grid-gap: 2.5rem; }
+    @media (max-width: 54em) {
+      .routine-progress {
+        grid-template-rows: 20vw 30vw; } }
+    @media (max-width: 40em) {
+      .routine-progress {
+        grid-template-rows: 30vw 40vw; } }
+    @media (max-width: 30em) {
+      .routine-progress {
+        grid-template-rows: 50vw 60vw; } }
     .routine-progress-1 {
       grid-column: 1 / -1;
       background-image: linear-gradient(to right bottom, rgba(230, 228, 197, 0.4), rgba(234, 230, 207, 0.4)), url("../imgs/flower-1.jpg");

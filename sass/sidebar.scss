@@ -48,7 +48,7 @@
       height: 4rem;
       width: 4rem;
       position: fixed;
-      top: 6.5rem;
+      top: 8rem;
       left: 1rem;
       border-radius: 50%;
       z-index: 2000;
@@ -101,7 +101,7 @@
       width: 3.5rem;
       border-radius: 50%;
       position: fixed;
-      top: 7rem;
+      top: 8.5rem;
       left: 1rem;
       background-image: linear-gradient(#d3c5b7, #fcf0e5);
       z-index: 1000;
@@ -274,7 +274,9 @@
     padding: 3rem 1rem 3rem 3rem;
     &-logo {
       margin-bottom: 2rem;
-      margin-left: 4rem;
+      // margin-left: 4rem;
+      margin-left: auto;
+      margin-right: auto;
       img {
         display: inline-block;
         margin-bottom: 0.3rem;
