@@ -92,10 +92,7 @@
           border-radius: 40%;
           color: rgba($color-black, 1);
           margin-right: 2px;
-          &::before {
-            content: "1";
-            font-size: 0.9rem;
-          }
+          font-size: 0.9rem;
         }
         ion-icon {
           font-size: 1.8rem;

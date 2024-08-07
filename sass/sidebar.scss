@@ -3,12 +3,10 @@
 }
 
 .nav {
-  // outline: 1px solid lime;
-  // background-color: lightblue;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  // height: 98vh;
+
   &-items {
     display: flex;
     flex-direction: column;
@@ -22,6 +20,7 @@
 
   // Responsive styles for mobile view
   @include respond(phone-biggest) {
+    visibility: hidden;
     z-index: 1500;
     height: 100vh;
     position: fixed;
@@ -29,7 +28,7 @@
     left: 0;
     opacity: 0;
     width: 0;
-    transition: all 0.3s; // Add transition for smooth effect
+    transition: all 0.2s; // Add transition for smooth effect
 
     &_checkbox:checked ~ .nav-background {
       height: 100vh;
@@ -40,26 +39,27 @@
     &_checkbox:checked ~ .nav {
       opacity: 1;
       width: 75%; // Set width to make it visible
-      transition: all 0.3s;
+      transition: all 0.2s;
+      visibility: visible;
     }
 
     &_button {
       background-color: white;
-      height: 5rem;
-      width: 5rem;
+      height: 4rem;
+      width: 4rem;
       position: fixed;
       top: 6rem;
-      left: 2rem;
+      left: 3rem;
       border-radius: 50%;
       z-index: 2000;
-      box-shadow: 0 1rem 2rem rgba(black, 0.4);
+      box-shadow: 0 1rem 2rem rgba(black, 0.27);
       text-align: center;
       cursor: pointer;
 
       // Icon menu animation
       .nav_icon-menu {
         position: relative;
-        margin-top: 2.5rem;
+        margin-top: 2rem;
 
         &,
         &::before,
@@ -79,33 +79,33 @@
         }
 
         &::before {
-          top: -0.8rem;
+          top: -0.7rem;
         }
 
         &::after {
-          top: 0.8rem;
+          top: 0.7rem;
         }
       }
 
       &:hover .nav_icon-menu::before {
-        top: -1rem;
+        top: -0.9rem;
       }
 
       &:hover .nav_icon-menu::after {
-        top: 1rem;
+        top: 0.9rem;
       }
     }
 
     &-background {
-      height: 4rem;
-      width: 4rem;
+      height: 3.5rem;
+      width: 3.5rem;
       border-radius: 50%;
       position: fixed;
       top: 6.5rem;
-      left: 2.5rem;
+      left: 3rem;
       background-image: linear-gradient(#d3c5b7, #fcf0e5);
       z-index: 1000;
-      transition: all 0.3s;
+      transition: all 0.2s;
       // transform: scale(20);
       // background-image: linear-gradient(darkblue, violet);
     }
@@ -135,7 +135,7 @@
   /**********************/
   &-options {
     list-style: none;
-
+    padding: 0.5rem;
     &-svg {
       height: 1.8rem;
     }
@@ -159,7 +159,10 @@
         margin-left: -1rem;
         font-size: 1.4rem;
         border-radius: 3px;
-        transition: all 0.3s;
+        transition: all 0.2s;
+        @include respond(phone-biggest) {
+          margin-left: 0.5rem;
+        }
 
         span {
           font-size: 1.2rem;
@@ -175,15 +178,17 @@
 
     &-resources {
       list-style: none;
-      color: $color-grey;
+      color: rgba($color-grey, 0.8);
       margin-left: 3rem;
-
+      padding: 0.5rem;
       li {
         display: flex;
         align-items: center;
         gap: 0.8rem;
         cursor: pointer;
         padding: 0.4rem;
+        font-size: 1.2rem;
+        font-weight: 500;
 
         &:hover {
           background-color: #eee6e1;
@@ -225,9 +230,10 @@
     border: none;
     background: none;
     gap: 1rem;
+    padding: 0.5rem;
     cursor: pointer;
     margin-top: auto;
-    transition: all 0.3s;
+    transition: all 0.2s;
     border-radius: 3px;
     @include respond(phone-bigger) {
       margin-bottom: 2rem;
@@ -241,11 +247,6 @@
       place-content: center;
       color: white;
       font-size: 1.6rem;
-
-      &:hover {
-        background-color: white;
-        color: black;
-      }
     }
 
     p {
@@ -272,7 +273,15 @@
     height: 85vh;
     padding: 3rem 1rem 3rem 3rem;
     &-logo {
-      display: none;
+      margin-bottom: 2rem;
+      margin-left: 4rem;
+      img {
+        display: inline-block;
+        margin-bottom: 0.3rem;
+      }
+      h1 {
+        display: inline-block;
+      }
     }
   }
 
@@ -284,6 +293,7 @@
   .nav_checkbox:checked ~ .nav {
     opacity: 1;
     width: 75%;
+    visibility: visible;
   }
 
   .nav_checkbox:checked + .nav_button .nav_icon-menu {

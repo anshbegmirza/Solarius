@@ -32,7 +32,7 @@ html {
   width: 100%; }
   @media (max-width: 70em) {
     html {
-      font-size: 50%; } }
+      font-size: 57%; } }
 
 body {
   background-color: #fbf7f3; }
@@ -129,11 +129,14 @@ body {
       border-radius: 50%;
       margin-bottom: 1.8rem;
       cursor: pointer; }
+      @media (max-width: 60em) {
+        .header-dp-img {
+          margin: 0; } }
     .header-dp p {
       font-size: 1.2rem;
       color: #1d1d1d;
       margin-bottom: 0.5rem;
-      font-weight: 500; }
+      font-weight: 700; }
     .header-dp span {
       font-size: 1rem;
       color: #81807b;
@@ -194,6 +197,7 @@ body {
     display: none; }
   @media (max-width: 54em) {
     .nav {
+      visibility: hidden;
       z-index: 1500;
       height: 100vh;
       position: fixed;
@@ -201,7 +205,7 @@ body {
       left: 0;
       opacity: 0;
       width: 0;
-      transition: all 0.3s; }
+      transition: all 0.2s; }
       .nav_checkbox:checked ~ .nav-background {
         height: 100vh;
         width: 75%;
@@ -209,22 +213,23 @@ body {
       .nav_checkbox:checked ~ .nav {
         opacity: 1;
         width: 75%;
-        transition: all 0.3s; }
+        transition: all 0.2s;
+        visibility: visible; }
       .nav_button {
         background-color: white;
-        height: 5rem;
-        width: 5rem;
+        height: 4rem;
+        width: 4rem;
         position: fixed;
         top: 6rem;
-        left: 2rem;
+        left: 3rem;
         border-radius: 50%;
         z-index: 2000;
-        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.27);
         text-align: center;
         cursor: pointer; }
         .nav_button .nav_icon-menu {
           position: relative;
-          margin-top: 2.5rem; }
+          margin-top: 2rem; }
           .nav_button .nav_icon-menu, .nav_button .nav_icon-menu::before, .nav_button .nav_icon-menu::after {
             width: 2.5rem;
             height: 2px;
@@ -236,23 +241,23 @@ body {
             left: 0;
             transition: all 0.2s; }
           .nav_button .nav_icon-menu::before {
-            top: -0.8rem; }
+            top: -0.7rem; }
           .nav_button .nav_icon-menu::after {
-            top: 0.8rem; }
+            top: 0.7rem; }
         .nav_button:hover .nav_icon-menu::before {
-          top: -1rem; }
+          top: -0.9rem; }
         .nav_button:hover .nav_icon-menu::after {
-          top: 1rem; }
+          top: 0.9rem; }
       .nav-background {
-        height: 4rem;
-        width: 4rem;
+        height: 3.5rem;
+        width: 3.5rem;
         border-radius: 50%;
         position: fixed;
         top: 6.5rem;
-        left: 2.5rem;
+        left: 3rem;
         background-image: linear-gradient(#d3c5b7, #fcf0e5);
         z-index: 1000;
-        transition: all 0.3s; } }
+        transition: all 0.2s; } }
   .nav-logo {
     display: grid;
     place-items: center;
@@ -264,7 +269,8 @@ body {
       font-size: 2rem;
       color: #1d1d1d; }
   .nav-options {
-    list-style: none; }
+    list-style: none;
+    padding: 0.5rem; }
     .nav-options-svg {
       height: 1.8rem; }
     .nav-options-item {
@@ -281,7 +287,10 @@ body {
       margin-left: -1rem;
       font-size: 1.4rem;
       border-radius: 3px;
-      transition: all 0.3s; }
+      transition: all 0.2s; }
+      @media (max-width: 54em) {
+        .nav-options-link:link, .nav-options-link:visited {
+          margin-left: 0.5rem; } }
       .nav-options-link:link span, .nav-options-link:visited span {
         font-size: 1.2rem;
         font-weight: 700; }
@@ -289,14 +298,17 @@ body {
       background-color: #eee6e1; }
     .nav-options-resources {
       list-style: none;
-      color: #81807b;
-      margin-left: 3rem; }
+      color: rgba(129, 128, 123, 0.8);
+      margin-left: 3rem;
+      padding: 0.5rem; }
       .nav-options-resources li {
         display: flex;
         align-items: center;
         gap: 0.8rem;
         cursor: pointer;
-        padding: 0.4rem; }
+        padding: 0.4rem;
+        font-size: 1.2rem;
+        font-weight: 500; }
         .nav-options-resources li:hover {
           background-color: #eee6e1; }
         .nav-options-resources li:first-child {
@@ -320,9 +332,10 @@ body {
     border: none;
     background: none;
     gap: 1rem;
+    padding: 0.5rem;
     cursor: pointer;
     margin-top: auto;
-    transition: all 0.3s;
+    transition: all 0.2s;
     border-radius: 3px; }
     @media (min-width: 54em) {
       .nav-logout {
@@ -336,9 +349,6 @@ body {
       place-content: center;
       color: white;
       font-size: 1.6rem; }
-      .nav-logout div:hover {
-        background-color: white;
-        color: black; }
     .nav-logout p {
       font-size: 1.2rem;
       font-weight: 700;
@@ -356,14 +366,21 @@ body {
     height: 85vh;
     padding: 3rem 1rem 3rem 3rem; }
     .nav-logo {
-      display: none; }
+      margin-bottom: 2rem;
+      margin-left: 4rem; }
+      .nav-logo img {
+        display: inline-block;
+        margin-bottom: 0.3rem; }
+      .nav-logo h1 {
+        display: inline-block; }
   .nav_checkbox:checked ~ .nav-background {
     height: 100vh;
     width: 75%;
     border-radius: 0; }
   .nav_checkbox:checked ~ .nav {
     opacity: 1;
-    width: 75%; }
+    width: 75%;
+    visibility: visible; }
   .nav_checkbox:checked + .nav_button .nav_icon-menu {
     background-color: transparent; }
   .nav_checkbox:checked + .nav_button .nav_icon-menu::before {
@@ -455,10 +472,8 @@ body {
         width: 1.4rem;
         border-radius: 40%;
         color: #1d1d1d;
-        margin-right: 2px; }
-        .activities-tasks-1-feedback div::before {
-          content: "1";
-          font-size: 0.9rem; }
+        margin-right: 2px;
+        font-size: 0.9rem; }
       .activities-tasks-1-feedback ion-icon {
         font-size: 1.8rem; }
       .activities-tasks-1-feedback p {
@@ -580,7 +595,8 @@ body {
       color: black; }
   .routine-text {
     font-size: 2.2rem;
-    margin-bottom: 2rem; }
+    margin-bottom: 2rem;
+    font-weight: 500; }
   .routine-img-text {
     display: flex;
     align-items: center;
@@ -613,10 +629,12 @@ body {
       .routine-progress-1 p {
         font-size: 1.8rem;
         margin-bottom: 1rem;
-        font-weight: 400; }
+        font-weight: 500;
+        color: rgba(29, 29, 29, 0.95); }
       .routine-progress-1 span {
         font-size: 1.2rem;
-        color: rgba(29, 29, 29, 0.8); }
+        color: rgba(29, 29, 29, 0.8);
+        font-weight: 500; }
       .routine-progress-1 button {
         align-self: flex-start;
         border: 1px solid rgba(29, 29, 29, 0.7);
@@ -629,7 +647,10 @@ body {
         transition: all 0.2s;
         cursor: pointer; }
         .routine-progress-1 button:hover {
-          background-color: #fcd9b8; }
+          background-color: rgba(255, 255, 255, 0.3);
+          transform: translateY(-2px); }
+        .routine-progress-1 button:active {
+          transform: translateY(-1px); }
     .routine-progress-2 {
       background-image: linear-gradient(to right bottom, rgba(230, 228, 197, 0.4), rgba(234, 230, 207, 0.4)), url("../imgs/flower-4.jpg");
       background-size: cover;
@@ -642,7 +663,8 @@ body {
 .icons-img2 p {
   font-size: 1.8rem;
   margin-bottom: 1rem;
-  font-weight: 400; }
+  font-weight: 500;
+  color: rgba(29, 29, 29, 0.95); }
 
 .icons-img2 div {
   display: flex;
@@ -652,7 +674,8 @@ body {
     font-size: 1.6rem; }
   .icons-img2 div span {
     font-size: 1.2rem;
-    color: rgba(29, 29, 29, 0.8); }
+    color: rgba(29, 29, 29, 0.8);
+    font-weight: 500; }
 
 .img-box {
   display: flex; }

@@ -47,6 +47,7 @@
   &-text {
     font-size: 2.2rem;
     margin-bottom: 2rem;
+    font-weight: 500;
   }
 
   &-img-text {
@@ -94,11 +95,13 @@
       p {
         font-size: 1.8rem;
         margin-bottom: 1rem;
-        font-weight: 400;
+        font-weight: 500;
+        color: rgba($color-black, 0.95);
       }
       span {
         font-size: 1.2rem;
         color: rgba($color-black, 0.8);
+        font-weight: 500;
       }
       button {
         align-self: flex-start;
@@ -112,7 +115,12 @@
         transition: all 0.2s;
         cursor: pointer;
         &:hover {
-          background-color: #fcd9b8;
+          background-color: rgba($color-white, 0.3);
+          transform: translateY(-2px);
+        }
+
+        &:active {
+          transform: translateY(-1px);
         }
       }
     }
@@ -144,7 +152,8 @@
   p {
     font-size: 1.8rem;
     margin-bottom: 1rem;
-    font-weight: 400;
+    font-weight: 500;
+    color: rgba($color-black, 0.95);
   }
   div {
     display: flex;
@@ -157,6 +166,7 @@
     span {
       font-size: 1.2rem;
       color: rgba($color-black, 0.8);
+      font-weight: 500;
     }
   }
 }
