@@ -1,7 +1,20 @@
-@import "mediaqueries.scss";
-@import "base.scss";
-@import "header.scss";
-@import "sidebar.scss";
-@import "mainContent.scss";
-@import "extra-class.scss";
-@import "routine";
+// @import "mediaqueries.scss";
+// @import "base.scss";
+// @import "header.scss";
+// @import "sidebar.scss";
+// @import "mainContent.scss";
+// @import "extra-class.scss";
+// @import "routine";
+
+@import "abstracts/mediaqueries";
+@import "abstracts/variables";
+@import "abstracts/extra-class";
+
+@import "base/base";
+
+@import "components/header";
+@import "components/mainContent";
+@import "components/routine";
+@import "components/sidebar";
+
+@import "layout/layout";

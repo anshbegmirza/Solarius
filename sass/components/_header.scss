@@ -24,6 +24,10 @@
       flex-direction: row;
     }
 
+    @include respond(mobile-large) {
+      margin-left: 3rem;
+    }
+
     &::before {
       content: "";
       height: 1.2rem;
@@ -63,6 +67,7 @@
     span {
       @include respond(tab) {
         opacity: 0;
+        display: none;
       }
     }
   }
@@ -76,6 +81,7 @@
 
     @include respond(tab) {
       flex-direction: row;
+      padding: 0 1rem;
     }
   }
   &-icons {

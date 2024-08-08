@@ -34,6 +34,8 @@
       height: 100vh;
       width: 75%;
       border-radius: 0;
+      top: 7rem;
+      left: 0;
     }
 
     &_checkbox:checked ~ .nav {
@@ -96,6 +98,13 @@
       }
     }
 
+    @include respond(mobile-large) {
+      &_button {
+        top: 1.5rem;
+        left: 1%;
+      }
+    }
+
     &-background {
       height: 3.5rem;
       width: 3.5rem;
@@ -107,7 +116,12 @@
       z-index: 1000;
       transition: all 0.2s;
       // transform: scale(20);
-      // background-image: linear-gradient(darkblue, violet);
+      // background-image: linear-gradient(darkblue,violet);
+
+      @include respond(mobile-large) {
+        top: 2rem;
+        left: 1rem;
+      }
     }
   }
 
@@ -321,13 +335,15 @@
 @include respond(mobile-large) {
   .nav_checkbox:checked ~ .nav-background {
     height: 100vh;
-    width: 89%;
+    width: 100%;
     border-radius: 0;
+    left: 0;
+    top: 0;
   }
 
   .nav_checkbox:checked ~ .nav {
     opacity: 1;
-    width: 89%;
+    width: 100%;
   }
 }
 
