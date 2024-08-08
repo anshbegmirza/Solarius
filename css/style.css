@@ -42,7 +42,8 @@ therefore 600/16=37.5em;
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; }
+  box-sizing: inherit;
+  -webkit-tap-highlight-color: transparent; }
 
 html {
   font-size: 62.5%;
@@ -542,7 +543,7 @@ body {
         height: 3.5rem;
         width: 3.5rem;
         border-radius: 50%;
-        position: absolute;
+        position: fixed;
         top: 1.5rem;
         left: 1rem;
         opacity: 0;
