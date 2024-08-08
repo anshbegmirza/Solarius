@@ -536,7 +536,7 @@ body {
   @media (max-width: 54em) and (max-width: 30em) {
     .nav_button {
       top: 1.5rem;
-      left: 1%; } }
+      left: 1rem; } }
   @media (max-width: 54em) {
       .nav-background {
         height: 3.5rem;
