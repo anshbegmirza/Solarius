@@ -24,8 +24,8 @@
       flex-direction: row;
     }
 
-    @include respond(mobile-large) {
-      margin-left: 3rem;
+    @include respond(phone) {
+      margin-left: 5rem;
     }
 
     &::before {

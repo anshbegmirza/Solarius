@@ -49,9 +49,9 @@
       background-color: white;
       height: 4rem;
       width: 4rem;
-      position: fixed;
-      top: 8rem;
-      left: 1rem;
+      position: absolute;
+      // top: 8rem;
+      // left: 1rem;
       border-radius: 50%;
       z-index: 2000;
       box-shadow: 0 1rem 2rem rgba(black, 0.27);
@@ -98,20 +98,21 @@
       }
     }
 
-    @include respond(mobile-large) {
-      &_button {
-        top: 1.5rem;
-        left: 1rem;
-      }
-    }
+    // @include respond(mobile-large) {
+    //   &_button {
+    //     top: 1.5rem;
+    //     left: 1rem;
+    //   }
+    // }
 
     &-background {
       height: 3.5rem;
       width: 3.5rem;
       border-radius: 50%;
-      position: fixed;
-      top: 8.5rem;
+      position: absolute;
+      top: 1.5rem;
       left: 1rem;
+      opacity: 0;
       background-image: linear-gradient(#d3c5b7, #fcf0e5);
       z-index: 1000;
       transition: all 0.2s;
@@ -305,6 +306,7 @@
     height: 100vh;
     width: 75%;
     border-radius: 0;
+    opacity: 1;
   }
   .nav_checkbox:checked ~ .nav {
     opacity: 1;
@@ -312,15 +314,15 @@
     visibility: visible;
   }
 
-  .nav_checkbox:checked + .nav_button .nav_icon-menu {
+  .nav_checkbox:checked ~ .nav_button .nav_icon-menu {
     background-color: transparent;
   }
 
-  .nav_checkbox:checked + .nav_button .nav_icon-menu::before {
+  .nav_checkbox:checked ~ .nav_button .nav_icon-menu::before {
     top: 0;
     transform: rotate(135deg);
   }
-  .nav_checkbox:checked + .nav_button .nav_icon-menu::after {
+  .nav_checkbox:checked ~ .nav_button .nav_icon-menu::after {
     top: 0;
     transform: rotate(-135deg);
   }
