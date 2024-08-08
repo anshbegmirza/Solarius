@@ -2,6 +2,14 @@
   padding: 3rem 1rem 3rem 3rem;
 }
 
+#navi-second {
+  position: fixed;
+  // top: 12rem;
+  // left: 3rem;
+  transform: translate(0%, 220%);
+  z-index: 10000;
+}
+
 .nav {
   display: flex;
   flex-direction: column;

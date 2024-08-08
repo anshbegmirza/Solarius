@@ -86,7 +86,8 @@ body {
 
 @media (max-width: 54em) {
   .nav_button {
-    display: block; } }
+    display: block;
+    z-index: 0; } }
 
 .header {
   padding: 1.4rem 3rem;
@@ -96,6 +97,9 @@ body {
   align-items: center;
   justify-content: space-between;
   margin: 1.6rem 0; }
+  @media (max-width: 54em) {
+    .header {
+      padding: 0 3rem; } }
   @media (max-width: 60em) {
     .header {
       flex-direction: row;
@@ -471,6 +475,11 @@ body {
 .navigation {
   padding: 3rem 1rem 3rem 3rem; }
 
+#navi-second {
+  position: fixed;
+  transform: translate(0%, 220%);
+  z-index: 10000; }
+
 .nav {
   display: flex;
   flex-direction: column;
@@ -692,7 +701,7 @@ body {
   .nav {
     height: 100%; } }
 
-@media (max-width: 46em) {
+@media (max-width: 53em) {
   .nav_checkbox:checked ~ .nav-background {
     height: 100vh;
     width: 100%;

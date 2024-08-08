@@ -5,6 +5,7 @@
 @include respond(phone-biggest) {
   .nav_button {
     display: block;
+    z-index: 0;
   }
 }
 
@@ -16,6 +17,10 @@
   align-items: center;
   justify-content: space-between;
   margin: 1.6rem 0;
+
+  @include respond(phone-biggest) {
+    padding: 0 3rem;
+  }
 
   // @include respond(mobile-large) {
   //   display: flex;
