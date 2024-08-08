@@ -286,7 +286,8 @@
   .nav {
     margin-top: 10rem;
     height: 85vh;
-    padding: 3rem 1rem 3rem 3rem;
+    // padding: 3rem 1rem 3rem 3rem;
+    padding: 0 2.5rem 2rem 2rem;
     &-logo {
       margin-bottom: 2rem;
       // margin-left: 4rem;
@@ -334,7 +335,7 @@
   }
 }
 
-@include respond(mobile-large) {
+@include respond(phone-medium) {
   .nav_checkbox:checked ~ .nav-background {
     height: 100vh;
     width: 100%;
