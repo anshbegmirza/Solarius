@@ -18,6 +18,12 @@
   justify-content: space-between;
   margin: 1.6rem 0;
 
+  @include respond(phone-medium) {
+    justify-content: flex-end;
+    gap: 2rem;
+    padding: 2rem 3rem !important;
+  }
+
   @include respond(phone-biggest) {
     padding: 0 3rem;
   }
@@ -40,7 +46,10 @@
     display: flex;
     align-items: center;
     gap: 2rem;
-    position: relative;
+    // position: relative;
+    @include respond(phone-medium) {
+      order: 2;
+    }
   }
 
   .nav_button {
@@ -55,11 +64,6 @@
     align-items: center;
     cursor: pointer;
     position: relative;
-
-    // @include respond(phone-medium) {
-    //   margin-left: 2rem;
-    //   transform: translate(100%, 0);
-    // }
 
     @include respond(tab) {
       flex-direction: row;

@@ -57,7 +57,8 @@ html {
       font-size: 57%; } }
 
 body {
-  background-color: #fbf7f3; }
+  background-color: #fbf7f3;
+  position: relative; }
 
 /*********************************/
 /*********************************/
@@ -97,6 +98,11 @@ body {
   align-items: center;
   justify-content: space-between;
   margin: 1.6rem 0; }
+  @media (max-width: 53.5em) {
+    .header {
+      justify-content: flex-end;
+      gap: 2rem;
+      padding: 2rem 3rem !important; } }
   @media (max-width: 54em) {
     .header {
       padding: 0 3rem; } }
@@ -109,8 +115,10 @@ body {
   .header-toggle-dp {
     display: flex;
     align-items: center;
-    gap: 2rem;
-    position: relative; }
+    gap: 2rem; }
+    @media (max-width: 53.5em) {
+      .header-toggle-dp {
+        order: 2; } }
   .header-dp {
     display: flex;
     flex-direction: column;
@@ -527,7 +535,10 @@ body {
         z-index: 2000;
         box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.27);
         text-align: center;
-        cursor: pointer; }
+        cursor: pointer;
+        position: fixed;
+        top: 1.7rem;
+        left: 1.5rem; }
         .nav_button .nav_icon-menu {
           position: relative;
           margin-top: 2rem; }
@@ -715,7 +726,7 @@ body {
 .parent-grid {
   display: grid;
   grid-template-columns: minmax(max-content, 16%) 1fr minmax(max-content, 7%);
-  grid-template-rows: minmax(max-content, 9%) repeat(8, 1fr);
+  grid-template-rows: max-content repeat(8, 1fr);
   grid-column-gap: 0px;
   height: 100vh;
   overflow-x: hidden;

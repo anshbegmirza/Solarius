@@ -65,6 +65,9 @@
       box-shadow: 0 1rem 2rem rgba(black, 0.27);
       text-align: center;
       cursor: pointer;
+      position: fixed;
+      top: 1.7rem;
+      left: 1.5rem;
 
       // Icon menu animation
       .nav_icon-menu {
@@ -124,6 +127,7 @@
       background-image: linear-gradient(#d3c5b7, #fcf0e5);
       z-index: 1000;
       transition: all 0.2s;
+      // overflow: hidden;
       // transform: scale(20);
       // background-image: linear-gradient(darkblue,violet);
 
