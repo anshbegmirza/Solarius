@@ -46,7 +46,7 @@
   .nav_button {
     position: fixed;
     margin-left: 1rem;
-    transform: translate(100%, 0);
+    // transform: translate(100%, 0);
   }
 
   &-dp {
@@ -55,6 +55,11 @@
     align-items: center;
     cursor: pointer;
     position: relative;
+
+    @include respond(phone-medium) {
+      margin-left: 2rem;
+      transform: translate(100%, 0);
+    }
 
     @include respond(tab) {
       flex-direction: row;
