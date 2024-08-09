@@ -97,13 +97,13 @@
         }
       }
 
-      &:hover .nav_icon-menu::before {
-        top: -0.9rem;
-      }
+      // &:hover .nav_icon-menu::before {
+      //   top: -0.9rem;
+      // }
 
-      &:hover .nav_icon-menu::after {
-        top: 0.9rem;
-      }
+      // &:hover .nav_icon-menu::after {
+      //   top: 0.9rem;
+      // }
     }
 
     // @include respond(mobile-large) {
