@@ -39,7 +39,7 @@ therefore 600/16=37.5em;
   }
 
   @if $breakpoint == phone-medium {
-    @media (max-width: 53.5em) {
+    @media (max-width: 54em) {
       @content;
       //736
     }

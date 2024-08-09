@@ -98,7 +98,7 @@ body {
   align-items: center;
   justify-content: space-between;
   margin: 1.6rem 0; }
-  @media (max-width: 53.5em) {
+  @media (max-width: 54em) {
     .header {
       justify-content: flex-end;
       gap: 2rem;
@@ -116,7 +116,7 @@ body {
     display: flex;
     align-items: center;
     gap: 2rem; }
-    @media (max-width: 53.5em) {
+    @media (max-width: 54em) {
       .header-toggle-dp {
         order: 2; } }
   .header-dp {
@@ -709,7 +709,7 @@ body {
   .nav {
     height: 100%; } }
 
-@media (max-width: 53.5em) {
+@media (max-width: 54em) {
   .nav_checkbox:checked ~ .nav-background {
     height: 100vh;
     width: 100%;
