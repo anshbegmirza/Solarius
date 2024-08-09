@@ -109,7 +109,12 @@ body {
   .header-toggle-dp {
     display: flex;
     align-items: center;
-    gap: 2rem; }
+    gap: 2rem;
+    position: relative; }
+  .header .nav_button {
+    position: fixed;
+    margin-left: 1rem;
+    transform: translate(100%, 0); }
   .header-dp {
     display: flex;
     flex-direction: column;
@@ -701,7 +706,7 @@ body {
   .nav {
     height: 100%; } }
 
-@media (max-width: 53em) {
+@media (max-width: 53.5em) {
   .nav_checkbox:checked ~ .nav-background {
     height: 100vh;
     width: 100%;
